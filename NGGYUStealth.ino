@@ -8,20 +8,14 @@ void typeKey(int key) {
 
 /* Init function */
 void setup() {
-  delay(3500);
+  Keyboard.begin(KeyboardLayout_it_IT);
+  delay(7000);
  
-  // Begining the Keyboard stream
-  Keyboard.begin();
-
-  // Wait 500ms
-  delay(500);
-
   Keyboard.press(KEY_LEFT_GUI);
   Keyboard.press('r');
   Keyboard.releaseAll();
 
-  typeKey(KEY_RETURN);
-
+  typeKey(KEY_BACKSPACE);
   delay(200);
 
   Keyboard.print("CMD");
